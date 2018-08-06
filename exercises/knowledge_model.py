@@ -6,12 +6,30 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 class Knowledge(Base):
-	# Create a table with 4 columns
-	# The first column will be the primary key
-	# The second column should be a string representing
-	# the name of the Wiki article that you're referencing
-	# The third column will be a string representing the 
-	# topic of the article. The last column will be
-	# an integer, representing your rating of the article.
+    # Create a table with 4 columns
+    # The first column will be the primary key
+    # The second column should be a string representing
+    # the name of the Wiki article that you're referencing
+    # The third column will be a string representing the 
+    # topic of the article. The last column will be
+    # an integer, representing your rating of the article.
 
-	pass
+    #def (self, id, namearticel, topic,rating):
+    __tablename__ ='knowledge'
+    
+    student_id = Column(Integer, primary_key=True)
+    namearticel = Column(String)
+    topic = Column(String)
+    rating = Column(Integer)
+
+    def __repr__(self):
+        return ("knowledge student_id : {}\n"
+               "knowledge namearticel If you want to learn about: {} \n"
+               "knowledge topic you should look at the Wikipedia article called: {} \n"
+               "knowledge rating We gave this article a rating of: {} \n" ).format(
+                self.student_id, self.namearticel, self.topic, self.rating)
+
+x = Knowledge( namearticel="wether", topic="rainbow", rating=9 )
+print(x)
+
+
