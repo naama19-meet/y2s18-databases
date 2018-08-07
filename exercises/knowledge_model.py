@@ -30,16 +30,5 @@ class knowledge(Base):
                 self.student_id, self.namearticel, self.topic, self.rating)
 
 
-    
-
-articel1 = knowledge( namearticel="wether", topic="rainbow", rating=9 )
-print(articel1)
-
-articel2 = knowledge( namearticel="basketball", topic="hobbis", rating=7 )
-print(articel2)
-
-
-articel3 = knowledge( namearticel="howtopizza", topic="food", rating=4 )
-print(articel3)
 
 
