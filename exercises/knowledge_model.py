@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-class Knowledge(Base):
+class knowledge(Base):
     # Create a table with 4 columns
     # The first column will be the primary key
     # The second column should be a string representing
@@ -29,7 +29,17 @@ class Knowledge(Base):
                "knowledge rating We gave this article a rating of: {} \n" ).format(
                 self.student_id, self.namearticel, self.topic, self.rating)
 
-x = Knowledge( namearticel="wether", topic="rainbow", rating=9 )
-print(x)
+
+    
+
+articel1 = knowledge( namearticel="wether", topic="rainbow", rating=9 )
+print(articel1)
+
+articel2 = knowledge( namearticel="basketball", topic="hobbis", rating=7 )
+print(articel2)
+
+
+articel3 = knowledge( namearticel="howtopizza", topic="food", rating=4 )
+print(articel3)
 
 
